@@ -1,0 +1,22 @@
+# Third-party notices
+
+This project is independent and does not bundle Flowseal profiles or nfqws2
+binaries. The user supplies the Flowseal directory.
+
+The Lua compatibility function in `zapret_keenetic/compat.py` reproduces the
+`altorder=1` segmentation order of nfqws1 and is based on the `hostfakesplit`
+implementation from the bol-van/zapret2 project, which is distributed under the
+MIT License:
+
+- https://github.com/bol-van/zapret2
+- Copyright (c) 2016-2026 bol-van
+
+Flowseal (zapret-discord-youtube) is also MIT-licensed and is acknowledged in
+the README:
+https://github.com/Flowseal/zapret-discord-youtube
+
+## Upstream
+
+This repository is an independent clean copy of
+https://github.com/Sxlenium/zapret-keenetic-converter (MIT).
+The original commit history is not included; the code is based on version 0.6.0.

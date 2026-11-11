@@ -1,0 +1,49 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "zapret-keenetic-converter"
+version = "0.6.0"
+description = "Convert Flowseal zapret-discord-youtube winws profiles to nfqws2-keenetic/OpenWrt bundles"
+readme = "README.md"
+requires-python = ">=3.10"
+license = {text = "MIT"}
+authors = [{name = "KeeneticZapret contributors"}]
+keywords = ["zapret", "nfqws2", "keenetic", "openwrt", "dpi"]
+classifiers = [
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Programming Language :: Python :: 3.13",
+  "Programming Language :: Python :: 3.14",
+  "License :: OSI Approved :: MIT License",
+  "Operating System :: OS Independent",
+]
+
+[project.urls]
+Repository = "https://github.com/lopatin2012/zapret-keenetic-converter-by-to-work"
+Issues = "https://github.com/lopatin2012/zapret-keenetic-converter-by-to-work/issues"
+
+[project.scripts]
+zapret-keenetic = "zapret_keenetic.cli:main"
+zapret-keenetic-test = "zapret_keenetic.tester:main"
+
+[project.optional-dependencies]
+test = ["lupa==2.6; python_version < '3.14'"]
+dev = ["ruff>=0.6"]
+
+[project.gui-scripts]
+zapret-keenetic-gui = "zapret_keenetic.gui:main"
+
+[tool.setuptools.packages.find]
+include = ["zapret_keenetic*"]
+
+[tool.ruff]
+target-version = "py310"
+line-length = 120
+
+[tool.ruff.lint]
+# Start with correctness checks; style rules can be enabled incrementally.
+select = ["E9", "F"]

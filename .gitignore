@@ -1,0 +1,22 @@
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.coverage
+dist/
+build/
+*.egg-info/
+converted/
+.venv/
+.build-venv/
+release/
+*.spec
+
+# Local test harnesses and temporary strategy outputs.
+.local-*
+.tmp-*
+.tools/
+strategy-test*.json
+compatibility-flowseal.json
+
+# Local router snapshots may contain private network configuration.
+router-backups/
